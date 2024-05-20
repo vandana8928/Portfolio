@@ -1,38 +1,354 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+}
+.logo-link {
+  color: hsl(116, 71%, 69%); /* Set the text color */
+  text-decoration: none; /* Remove the underline */
+  font-size: 18px; /* Set the font size */
+  font-weight: bold; /* Set the font weight */
+  /* Add any other styles you'd like */
+  font-style: oblique;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo-link:hover {
+  color: #15e21f; /* Change color on hover */
+}
+.Navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  background-color: black;
+  position: relative;
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+}
+
+.nav-items {
+  display: flex;
+
+  justify-content: center;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items li {
+  margin-left: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: all ease 0.1s;
+  position: relative;
+}
+
+.nav-items a:hover,
+.nav-items a.active {
+  color: #07d549;
+}
+
+.nav-items a:hover::after,
+.nav-items a.active::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background: #07d549;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    padding: 0px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: -100%; /* Initially hide the menu off-screen */
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transition: right 0.3s ease;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1000;
+  }
+
+  .nav-items.open {
+    right: 0; /* Slide the menu in from the right */
+    display: flex;
+  }
+
+  .nav-items li {
+    margin: 20px 0;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 40px;
   }
 }
+.whatbtn{
+  background-color: #15e21f;
+  padding: 10px;
+  border: none;
+}
+/* Navbar end */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* hero section started */
+.hero {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-image: linear-gradient(to right, rgb(125, 244, 98), #cff2da);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.hero h1 {
+  animation: bounce 2s infinite;
+}
+.hero p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero .btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.btn {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.btn1 {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.Skills {
+  width: 100%;
+  height: auto;
+}
+.Skills h1 {
+  text-align: center;
+}
+
+.skills-content {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.skills-content .image {
+  width: 40%;
+  height: 100%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.skills-content .con {
+  width: 40%;
+  height: 100%;
+  text-align: justify;
+}
+
+.skills-description {
+  margin: 0;
+}
+
+.skills-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  list-style-type: square;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.skills-list li {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.Project {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  /* Add padding to the container */
+}
+.grid-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(
+    3,
+    calc(30% - 20px)
+  ); /* Subtract the gap from the width */
+  gap: 20px; /* Gap between grid items */
+}
+
+.grid-item {
+  background-color: white;
+  padding: 20px;
+  height: 300px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding and border in the width */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.grid-item p {
+  color: black;
+}
+.grid-item:hover {
+  background-color: whitesmoke; /* Example: Change background color on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Example: Add box shadow on hover */
+}
+.grid-item img {
+  width: 100%;
+  height: 60%;
+  transition: transform 0.3s ease-in-out;
+}
+.grid-item img:hover {
+  transform: scale(1.1); /* Example: Enlarge the image on hover */
+}
+@media (max-width: 767px) {
+  .skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .skills-content .image {
+    width: 90%;
+    height: 50%;
+  }
+
+  .skills-content .con {
+    width: 90%;
+    height: 50%;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .grid-item {
+    width: 90%;
+ 
+  }
+}
+/* Contact */
+/* Contact.css */
+
+
+
+
+/* footer */
+.footer {
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer h2,
+.footer p {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.social-icons ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.social-icons ul a {
+  text-decoration: none;
+}
+
+.video-gallery {
+  text-align: center;
+}
+.video-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, calc(30% - 20px)); /* Three columns */
+
+  gap: 20px; /* Gap between grid items */
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    display: flex;
+    flex-direction: column;
   }
 }
