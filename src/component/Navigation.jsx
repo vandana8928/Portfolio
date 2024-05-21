@@ -31,11 +31,7 @@ const Navigation = () => {
               Project
             </a>
           </li>
-          <li>
-            <a href="#video" className="nav-link" onClick={toggleMenu}>
-              Video
-            </a>
-          </li>
+         
           <li>
            
               <WhatsAppButton/>

@@ -6,7 +6,7 @@ import Project from "./component/Project";
 import CustomScrollButton from "./component/CustomScrollButton";
 import Footer from "./component/Footer";
 import Skills from "./component/Skills";
-import VideoGallery from "./component/VideoGallery";
+
 
 
 function App() {
@@ -32,9 +32,9 @@ function App() {
       <div id="project">
         <Project />
       </div>
-      <div id="video">
+      {/* <div id="video">
         <VideoGallery />
-      </div>
+      </div> */}
 
       <CustomScrollButton direction="up" onClick={scrollToTop} />
       <CustomScrollButton direction="down" onClick={scrollToBottom} />

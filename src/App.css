@@ -124,6 +124,8 @@ a {
   background-color: #15e21f;
   padding: 10px;
   border: none;
+  border-radius: 5px;
+  font-size: 16px;
 }
 /* Navbar end */
 
@@ -334,21 +336,3 @@ a {
   text-decoration: none;
 }
 
-.video-gallery {
-  text-align: center;
-}
-.video-grid {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, calc(30% - 20px)); /* Three columns */
-
-  gap: 20px; /* Gap between grid items */
-}
-
-@media (max-width: 768px) {
-  .video-grid {
-    display: flex;
-    flex-direction: column;
-  }
-}
