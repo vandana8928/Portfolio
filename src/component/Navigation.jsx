@@ -12,7 +12,7 @@ const Navigation = () => {
   return (
     <div className="Navbar">
       <a href="#home" className="logo-link" onClick={toggleMenu}>
-     Vandana Yadav
+        Vandana Yadav
       </a>
       <div className={`nav-items ${menuOpen ? "open" : ""}`}>
         <ul>
@@ -31,11 +31,9 @@ const Navigation = () => {
               Project
             </a>
           </li>
-         
+
           <li>
-           
-              <WhatsAppButton/>
-          
+            <WhatsAppButton />
           </li>
         </ul>
       </div>
