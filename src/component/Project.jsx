@@ -36,6 +36,14 @@ const projects = [
     description: "Classmitra",
     link: "https://classmitra.netlify.app/",
   },
+  {
+    img: "./img/Women.png",
+    description: "WomenCollection",
+    link: "https://diorwomecollection.netlify.app/",
+  },
+
+
+
 ];
 
 const Project = () => (
