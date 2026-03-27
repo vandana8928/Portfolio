@@ -79,7 +79,7 @@ function AvatarCard({ openToWork }) {
 
       {/* ── floating experience badge ── */}
       <div
-        className="absolute -top-4 -right-4 lg:-top-5 lg:-right-6 flex flex-col items-center px-4 py-3 rounded-2xl"
+        className="absolute -top-5 -right-1 md:-right-3 lg:-top-5 lg:-right-6 flex flex-col items-center px-2 py-2 rounded-[10px] md:rounded-2xl "
         style={{
           background: '#0D0D1A',
           border: '1px solid rgba(255,255,255,0.08)',
@@ -87,7 +87,7 @@ function AvatarCard({ openToWork }) {
         }}
       >
         <span
-          className="text-[22px] font-black leading-none"
+          className="text-[16px] md:text-[22px] font-black leading-none"
           style={{ color: '#00D4AA', fontFamily: 'Syne, sans-serif' }}
         >
           1.5+
