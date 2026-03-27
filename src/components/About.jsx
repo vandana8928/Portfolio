@@ -128,7 +128,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 px-4 sm:px-6 max-w-7xl mx-auto"
+      className="py-10 px-4 sm:px-6 max-w-7xl mx-auto"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
@@ -149,7 +149,7 @@ export default function About() {
               {[4, 8, 12].map((w, i) => (
                 <span
                   key={i}
-                  className="h-[3px] rounded-full"
+                  className="h-0.75 rounded-full"
                   style={{ width: w, background: '#00D4AA', opacity: i === 2 ? 1 : 0.35 }}
                 />
               ))}
@@ -174,7 +174,7 @@ export default function About() {
             <span className="relative inline-block" style={{ color: '#00D4AA' }}>
               pixels
               <span
-                className="absolute left-0 -bottom-0.5 h-[3px] w-full rounded-full"
+                className="absolute left-0 -bottom-0.5 h-0.75 w-full rounded-full"
                 style={{ background: '#00D4AA', opacity: 0.3 }}
               />
             </span>
