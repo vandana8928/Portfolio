@@ -185,7 +185,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-auto flex items-center overflow-hidden"
       style={{ paddingTop: 80 }}
     >
       {/* ── background blobs + rings ── */}
