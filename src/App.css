@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #0A0A0F;
+    color: #E8E8F0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  html { scroll-behavior: smooth; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.skill-bar-fill {
+  transition: width 1.2s ease;
+}
